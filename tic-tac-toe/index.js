@@ -66,28 +66,22 @@ const gameBoard = (function() {
 
         board[row][col] = move
 
+        gameBoard.changeMove()
+
         displayHandler.displayBoard()
 
     }
 
     function checkStatus() {
-        if (isGameOver() || hasWinner()) {
-            console.log("Game over!")
-            return true
-        }
-        
-        return false
-    }
-
-    function printBoard() {
-        for (row of board) {
-            console.log(row)
-        }
-        console.log("-----")
+        return hasWinner() || isGameOver()
     }
 
     function getBoard() {
         return board
+    }
+
+    function getCurrentMove() {
+        return currentMove
     }
 
     function changeMove() {
@@ -102,14 +96,23 @@ const gameBoard = (function() {
 
     }
 
+    function resetBoard() {
+        board = [
+            [" ", " ", " "], 
+            [" ", " ", " "], 
+            [" ", " ", " "]
+        ]
+    }
+
     return  {
         hasWinner,
         isGameOver,
         placeMove,
         checkStatus,
-        printBoard,
         getBoard,
-        changeMove
+        getCurrentMove,
+        changeMove,
+        resetBoard
     }
 
 })()
@@ -132,7 +135,7 @@ let displayHandler = (function() {
 
                 tile.addEventListener("click", () => {
                     if (!gameBoard.checkStatus()) {
-                        gameBoard.placeMove(i, j, gameBoard.changeMove())
+                        gameBoard.placeMove(i, j, gameBoard.getCurrentMove())
                         gameBoard.checkStatus()
                     }
                 })
@@ -147,20 +150,5 @@ let displayHandler = (function() {
     }
 
 })()
-
-// console.log(gameBoard.hasWinner())
-// console.log(gameBoard.isGameOver())
-// gameBoard.printBoard()
-
-// gameBoard.placeMove(0, 0, "X")
-// gameBoard.checkStatus()
-// gameBoard.placeMove(1, 1, "O")
-// gameBoard.checkStatus()
-// gameBoard.placeMove(0, 1, "X")
-// gameBoard.checkStatus()
-// gameBoard.placeMove(1, 0, "O")
-// gameBoard.checkStatus()
-// gameBoard.placeMove(0, 2, "X")
-// gameBoard.checkStatus()
 
 displayHandler.displayBoard()
