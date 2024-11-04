@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+}
+
+dialog {
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: fixed;
+    height: 100%;
+    width: 100%;
+
+    overflow: scroll;
+
+    background-color: lightgrey;
+}
+
+.title {
+    margin-top: 100px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: center;
+
+    /* height: 500px; */
+    width: 1000px;
+    padding: 20px 50px;
+    margin: 100px;
+
+    background-color: grey;
+}
+
+.card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 10px;
+ 
+    text-align: center;
+
+    height: 150px;
+}
+
+.button-div {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.toggle-btn {
+    background-color: lightblue;
+}
+
+.delete-btn {
+    background-color: lightcoral;
+}
+
+.book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    align-items: center;
+}
+
+.new-book-btn {
+    margin-bottom: 50px;
+}

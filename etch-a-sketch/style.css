@@ -1,0 +1,28 @@
+
+.prompt-btn {
+    display: block;
+    margin: 30px auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+
+    margin: auto;
+
+    width: 400px;
+    height: 400px;
+
+    flex-wrap: wrap;
+}
+
+.pixel {
+    height: 25px;
+    width: 25px;
+    background-color: lightgrey;
+    opacity: 0.1;
+}
+
+.black {
+    background-color: black;
+}

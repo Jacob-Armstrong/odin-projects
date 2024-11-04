@@ -1,0 +1,171 @@
+@font-face {
+    font-family: odin-text;
+    src: url("./fonts/Norse-Bold.otf")
+}
+
+@font-face {
+    font-family: araboto;
+    src: url("./fonts/Araboto\ Medium\ 400.ttf")
+}
+
+body {
+    display: flex;
+    align-items: stretch;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: "araboto";
+    font-size: 25px;
+}
+
+p {
+    margin: 0;
+}
+
+.sidebar {
+
+    flex: 1;
+
+    background-image: url("./images/background.jpg");
+    background-size: cover;
+
+    /* width: 1vw;
+    height: 500px; */
+}
+
+.logoholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 200px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+
+    padding: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: 125px;
+}
+
+.odintext {
+    font-family: "odin-text";
+    font-size: 90px;
+    margin: 0;
+}
+
+.maincontainer {
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 2.2;
+
+    width: 300px;
+    height: 100vh;
+
+}
+
+.textcontainer, .bottomcontainer {
+    background-color: #f9fafb;
+    flex: 1.2;
+}
+
+.ptext {
+
+    width: 720px;
+    padding: 100px 0px 30px 50px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.formcontainer {
+
+    flex: 1;
+
+    box-shadow: 5px 5px 10px lightgrey;
+    z-index: 10;
+
+    padding-left: 50px;
+}
+
+.formtitle {
+    margin: 10px 0px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    width: 700px;
+}
+
+.line {
+    display: flex;
+    gap: 90px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+label {
+    font-size: 12px;
+    color: darkslategrey;
+}
+
+input {
+    width: 250px;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+
+    padding: 5px 10px;
+}
+
+input:focus {
+    /* border-color: blue; */
+    box-shadow: 5px 5px 10px lightgrey;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+.bottomcontainer {
+    padding-left: 50px;
+
+    font-size: 20px;
+}
+
+.acc-btn {
+
+    margin: 30px 0;
+
+    padding: 12px 40px;
+
+    box-shadow: 5px 5px 10px lightgrey;
+
+    background-color: #596D48;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+
+a {
+    color: #596D48;
+    text-decoration: none;
+}

@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+}
+
+html, body {
+    font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
+    height: 100%;
+}
+
+.sidebar {
+    color: white;
+    background-color: #1991d3;
+    grid-row: 1 / 3;
+
+    display: grid;
+    grid-template-rows: 100px 400px 200px;
+    gap: 30px;
+
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px;
+}
+
+.main-logo {
+    height: 50px;
+    width: 50px;
+}
+
+.title {
+    margin: 0;
+}
+
+.navigation-container, .options-container {
+    display: grid;
+    padding-left: 30px;
+}
+
+.sidebar-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.sidebar-text {
+    font-size: 20px;
+}
+
+.sidebar-logo {
+    width: 30px;
+    height: 30px;
+}
+
+.header {
+    box-shadow: 5px 5px 5px lightgrey;
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 50px;
+}
+
+.search-area {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.search-logo {
+    width: 25px;
+    height: 25px;
+}
+
+#search-bar {
+    border: none;
+    background-color: lightgrey;
+    border-radius: 20px;
+    width: 600px;
+    height: 30px;
+}
+
+.profile-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-logo {
+    height: 30px;
+    width: 30px;
+}
+
+.profile-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+}
+
+.lower-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 50px;
+}
+
+.profile-welcome {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-pic-large {
+    height: 60px;
+    width: 60px;
+    border-radius: 20px;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 50px;
+}
+
+.card-btn {
+    background-color: #1991d3;
+    border: none;
+    border-radius: 20px;
+
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+
+    padding: 10px 20px;
+}
+
+.main-content {
+    background-color: #e2e8f0;
+
+    padding: 40px 30px 50px 20px;
+
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    row-gap: 30px;
+}
+
+.your-projects {
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+    gap: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    border-left: 10px solid lightcoral;
+    height: 200px;
+
+    padding: 40px 20px 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-logos {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.card-logo {
+    height: 30px;
+    width: 30px;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.announcement-container {
+    background-color: white;
+    border-radius: 10px;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    padding: 0px 30px;
+}
+
+.announcement {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.divider {
+    border: 1px solid lightgrey;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.trending-container {
+    background-color: white;
+    border-radius: 10px;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    padding: 0px 20px;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.trending-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+
