@@ -10,9 +10,28 @@
 <body>
     
     <div class="container">
-        <div class="board">
-            
+
+        <div class="grid-container">
+            <div class="player-one-container">
+                <h2 class="player-name" id="player-one-name"></h2>
+                <h1 id="player-one-move">X</h1>
+                <input type="text" id="player-one-input" name="player-one-input" placeholder="Enter your name...">
+            </div>
+    
+            <div class="board"></div>
+    
+            <div class="player-two-container">
+                <h2 class="player-name" id="player-two-name"></h2>
+                <h1 id="player-two-move">O</h1>
+                <input type="text" id="player-two-input" name="player-two-input" placeholder="Enter your name...">
+            </div>
         </div>
+
+        <div class="announcement-container">
+            <h1 class="announcement-text">Have fun!</h1>
+            <button id="reset-btn">Reset</button>
+        </div>
+
     </div>
 
     <script src="./index.js"></script>

@@ -1,12 +1,4 @@
 
-// Document Element References
-
-
-
-
-
-
-
 // Tic-Tac-Toe Board IIFE Module
 const gameBoard = (function() {
 
@@ -102,6 +94,10 @@ const gameBoard = (function() {
             [" ", " ", " "], 
             [" ", " ", " "]
         ]
+
+        currentMove = "X"
+
+        displayHandler.displayBoard()
     }
 
     return  {
@@ -121,6 +117,34 @@ let displayHandler = (function() {
 
     const gridBoard = document.querySelector(".board")
 
+    const playerOneInput = document.querySelector("#player-one-input")
+    const playerOneName = document.querySelector("#player-one-name")
+    const playerOneMove = document.querySelector("#player-one-move")
+
+    const playerTwoInput = document.querySelector("#player-two-input")
+    const playerTwoName = document.querySelector("#player-two-name")
+    const playerTwoMove = document.querySelector("#player-two-move")
+
+    const announcementText = document.querySelector(".announcement-text")
+    const resetBtn = document.querySelector("#reset-btn")
+
+    playerOneInput.addEventListener("input", (e) => {
+        playerOneName.textContent = e.target.value
+    })
+
+    playerTwoInput.addEventListener("input", (e) => {
+        playerTwoName.textContent = e.target.value
+    })
+
+    resetBtn.addEventListener("click", () => {
+        gameBoard.resetBoard()
+        playerOneMove.style.backgroundColor = "lightgreen"
+        playerTwoMove.style.backgroundColor = "transparent"
+        playerOneMove.textContent = "X"
+        playerTwoMove.textContent = "O"
+        announcementText.textContent = "Have fun!"
+    })
+
     function displayBoard() {
         gridBoard.innerHTML = ""
 
@@ -136,7 +160,27 @@ let displayHandler = (function() {
                 tile.addEventListener("click", () => {
                     if (!gameBoard.checkStatus()) {
                         gameBoard.placeMove(i, j, gameBoard.getCurrentMove())
-                        gameBoard.checkStatus()
+
+                        if (gameBoard.checkStatus()) {
+                            if (gameBoard.hasWinner()) {
+                                if (gameBoard.getCurrentMove() == "X") {
+                                    playerTwoMove.textContent = "O Wins!"
+                                    
+                                } else {
+                                    playerOneMove.textContent = "X Wins!"
+                                }
+                            } else {
+                                announcementText.textContent = "You tied! Play again!"
+                            }
+                        } else {
+                            if (gameBoard.getCurrentMove() == "X") {
+                                playerOneMove.style.backgroundColor = "lightgreen"
+                                playerTwoMove.style.backgroundColor = "transparent"
+                            } else {
+                                playerOneMove.style.backgroundColor = "transparent"
+                                playerTwoMove.style.backgroundColor = "lightgreen"
+                            }
+                        }
                     }
                 })
 
@@ -146,7 +190,7 @@ let displayHandler = (function() {
     }
 
     return {
-        displayBoard,
+        displayBoard
     }
 
 })()
