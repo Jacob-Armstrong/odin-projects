@@ -34,6 +34,10 @@
     text-overflow: clip;
 }
 
+#player-one-move {
+    background-color: lightgreen;
+}
+
 .player-name {
     word-wrap: break-word;
     word-break: break-all;
