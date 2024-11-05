@@ -138,7 +138,7 @@ let displayHandler = (function() {
 
     resetBtn.addEventListener("click", () => {
         gameBoard.resetBoard()
-        playerOneMove.style.backgroundColor = "lightgreen"
+        playerOneMove.style.backgroundColor = "orange"
         playerTwoMove.style.backgroundColor = "transparent"
         playerOneMove.textContent = "X"
         playerTwoMove.textContent = "O"
@@ -174,11 +174,11 @@ let displayHandler = (function() {
                             }
                         } else {
                             if (gameBoard.getCurrentMove() == "X") {
-                                playerOneMove.style.backgroundColor = "lightgreen"
+                                playerOneMove.style.backgroundColor = "orange"
                                 playerTwoMove.style.backgroundColor = "transparent"
                             } else {
                                 playerOneMove.style.backgroundColor = "transparent"
-                                playerTwoMove.style.backgroundColor = "lightgreen"
+                                playerTwoMove.style.backgroundColor = "orange"
                             }
                         }
                     }
