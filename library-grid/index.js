@@ -47,17 +47,59 @@ cancelBtn.addEventListener("click", () => {
 
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = `by ${author}`;
-    this.pages = `${pages} pages`;
-
-    if (read) {
-        this.read = "Read";
-    } else {
-        this.read = "Not Read";
+class Book {
+    constructor(title, author, pages, read) {
+        this._title = title;
+        this._author = author;
+        this._pages = pages;
+        read ? this._read = "Read" : this._read = "Not Read"
     }
+
+    get title() {
+        return this._title;
+    }
+
+    set title(newTitle) {
+        this._title = newTitle;
+    }
+
+    get author() {
+        return this._author;
+    }
+
+    set author(newAuthor) {
+        this._author = newAuthor;
+    }
+
+    get pages() {
+        return this._pages;
+    }
+
+    set pages(newPages) {
+        this._pages = newPages
+    }
+
+    get read() {
+        return this._read;
+    }
+
+    set read(readStatus) {
+        this._read = readStatus
+    }
+
 }
+
+// function Book(title, author, pages, read) {
+//     this.title = title;
+//     this.author = `by ${author}`;
+//     this.pages = `${pages} pages`;
+
+//     if (read) {
+//         this.read = "Read";
+//     } else {
+//         this.read = "Not Read";
+//     }
+// }
 
 function addBookToLibrary(title, author, pages,read) {
     let book = new Book(title, author, pages, read);
