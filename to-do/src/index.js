@@ -1,6 +1,5 @@
 import { Project } from "./project"
 import "./style.css"
-import Task from "./task"
 
 let newProjectBtn = document.querySelector("#new-project-btn")
 let newTaskDialog = document.querySelector("#new-task-dialog")
