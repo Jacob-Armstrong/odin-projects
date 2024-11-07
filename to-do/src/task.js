@@ -1,10 +1,9 @@
 class Task {
-    constructor(title, description, dueDate, priority, complete) {
+    constructor(title, description, dueDate, priority) {
         this._title = title,
         this._description = description,
         this._dueDate = dueDate,
         this._priority = priority
-        this._complete = complete
     }
 
     get title() {
@@ -37,14 +36,6 @@ class Task {
 
     set priority(newPriority) {
         this._priority = newPriority
-    }
-
-    get complete() {
-        return this._complete
-    }
-
-    set complete(newComplete) {
-        this._complete = newComplete
     }
 }
 
