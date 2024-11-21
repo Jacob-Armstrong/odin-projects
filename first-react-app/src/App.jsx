@@ -1,9 +1,10 @@
 import "./App.css";
+import Person from "./Person";
 
 function App() {
   return (
     <>
-      <h1>Hello, world!</h1>
+      <Person />
     </>
   );
 }
