@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../../styles/EducationList.css";
 
 import EducationForm from "./EducationForm";
 import EducationItem from "./EducationItem";

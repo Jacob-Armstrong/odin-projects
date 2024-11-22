@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Input from "../Input";
+import "../../styles/EducationForm.css";
 
 function EducationForm({ setEducation, setEditing }) {
   const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ function EducationForm({ setEducation, setEditing }) {
   };
 
   const handleCancel = () => {
-    setEditing(false); // Close the form
+    setEditing(false);
   };
 
   return (

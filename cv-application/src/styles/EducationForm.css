@@ -1,0 +1,6 @@
+.education-form {
+  display: grid;
+  grid-template-columns: repeat(2, 195px);
+
+  padding: 20px;
+}
