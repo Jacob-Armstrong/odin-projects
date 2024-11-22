@@ -1,0 +1,16 @@
+.personal-detail-form {
+  display: grid;
+  grid-template-columns: repeat(2, 195px);
+  row-gap: 10px;
+}
+
+.personal-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.personal-detail-display {
+  text-align: center;
+}

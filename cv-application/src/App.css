@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  width: 100vw;
+
+  background-color: grey;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.resume-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
