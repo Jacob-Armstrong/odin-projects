@@ -9,11 +9,17 @@
   background-color: grey;
 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
+.resume-forms {
+  margin-left: 100px;
 }
 
 .resume-preview {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  margin-right: 300px;
 }

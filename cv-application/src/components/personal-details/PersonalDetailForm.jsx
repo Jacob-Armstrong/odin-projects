@@ -20,6 +20,7 @@ function PersonalDetailForm({ profile, handleProfile }) {
           id="fullName"
           value={profile.fullName || ""}
           onChange={handleChange}
+          placeholder="John Smith"
         />
         <Input
           type="email"
@@ -27,6 +28,7 @@ function PersonalDetailForm({ profile, handleProfile }) {
           id="email"
           value={profile.email || ""}
           onChange={handleChange}
+          placeholder="email@gmail.com"
         />
         <Input
           type="tel"
@@ -34,6 +36,7 @@ function PersonalDetailForm({ profile, handleProfile }) {
           id="phoneNum"
           value={profile.phoneNum || ""}
           onChange={handleChange}
+          placeholder="949-949-9449"
         />
         <Input
           type="text"
@@ -41,6 +44,7 @@ function PersonalDetailForm({ profile, handleProfile }) {
           id="gitHub"
           value={profile.gitHub || ""}
           onChange={handleChange}
+          placeholder="github.com/profile"
         />
       </div>
     </div>
